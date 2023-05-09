@@ -19,3 +19,9 @@ For setup see [backend/Readme.md](backend/Readme.md).
 
 Stripe-CLI is needed for development and local testing of Stripe webhooks.
 For setup see [stripe-cli/Readme.md](stripe-cli/Readme.md).
+
+## Stripe Checkout
+
+Following sequence starts when the user clicked _buy_ on a specific price.
+
+![sequence-checkout.jpg](diagrams/sequence-checkout.jpg)
