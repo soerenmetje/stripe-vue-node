@@ -1,6 +1,6 @@
 # Stripe-Vue-Node
 
-A boilerplate for a dashboard integrating Stripe using VueJS and NodeJS.
+This project is a boilerplate for a dashboard integrating Stripe using VueJS and NodeJS.
 
 ## Components
 
