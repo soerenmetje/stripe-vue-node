@@ -15,7 +15,7 @@ stripe login
 
 Then, forward events to a local webhook endpoint:
 ```shell
-stripe listen --forward-to localhost:4242/events-stripe
+stripe listen --forward-to localhost:4242/events
 ```
 Insert the printed webhook secret `whsec_e5d6836a1...` into your app config.
 
