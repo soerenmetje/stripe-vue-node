@@ -30,7 +30,7 @@ router.post(
                 const session = event.data.object
                 console.log(`Stripe checkout session '${session.id}' status is '${session.status}'`)
 
-                console.debug(session)
+                // console.debug(session)
 
                 const customerId = session.customer
                 let discordId = session.metadata.discordId // checkouts originating from dashboard have a discordId
