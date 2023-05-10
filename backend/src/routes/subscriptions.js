@@ -14,13 +14,16 @@ const router = express.Router();
 router.use(express.json())
 
 router.get('/prices', async (req, res) => {
-    const prices = await stripe.prices.list({
-        expand: ['data.product'],
-    }); // TODO add handling pagination
+    const allPrices = []
+    // handles pagination. See https://stripe.com/docs/api/pagination/auto
+    for await (const price of stripe.prices.list({expand: ['data.product']})) {
+        //console.debug(price)
+        allPrices.push(price)
+    }
+    //console.debug(allPrices)
+    //console.debug(`Number of prices: ${allPrices.length}`)
 
-    //console.debug(prices.data)
-
-    res.json(prices.data)
+    res.json(allPrices)
 })
 
 router.post('/checkout', async (req, res) => {
